@@ -322,17 +322,14 @@ class TeacherDetailView(View):
         all_courses = Course.objects.filter(teacher=teachert)
         sorte_teachers = Teacher.objects.all().order_by('-click_nums')[:5]
 
-
         has_teacher_faved=False
-        if UserFavorite.objects.filter(user=request.user,fav_type=3,fav_id=teachert.id):
-            has_teacher_faved = True
-
         has_org_faved=False
-        if UserFavorite.objects.filter(user=request.user,fav_type=2,fav_id=teachert.org.id):
-            has_org_faved = True
-
-
-
+        if request.user.is_authenticated():
+            # 未登录状态
+            if UserFavorite.objects.filter(user=request.user,fav_type=3,fav_id=teachert.id):
+                has_teacher_faved = True
+            if UserFavorite.objects.filter(user=request.user,fav_type=2,fav_id=teachert.org.id):
+                has_org_faved = True
 
         return render(request, 'teacher-detail.html',{
             'teacher':teachert,
@@ -341,4 +338,3 @@ class TeacherDetailView(View):
             'has_org_faved':has_org_faved,
             'has_teacher_faved':has_teacher_faved,
         })
-
