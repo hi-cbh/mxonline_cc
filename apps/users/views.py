@@ -74,6 +74,13 @@ class RegisterView(View):
         else:
             return render(request,'register.html',{"register_form":register_form})
 
+
+class ApiView(View):
+    def get(self,request):
+        return render(request, '200.html',{})
+
+
+
 class LoginView(View):
     def get(self,request):
         return render(request, 'login.html',{})

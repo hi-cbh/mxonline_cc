@@ -21,12 +21,14 @@ import xadmin
 from django.views.static import serve
 
 from djangoProject.settings import MEDIA_ROOT
-from users.views import LoginView,LogoutView,RegisterView, ActiveUserView,ForgetPwdView,ResetView,ModifyPwdView
+from users.views import LoginView,LogoutView,RegisterView, ActiveUserView,ForgetPwdView,ResetView,ModifyPwdView,ApiView
 from users.views import  IndexView
 from organization.views import OrgView
 
 
 urlpatterns = [
+    url(r'^api/',include('api.urls', namespace='apis')),
+    # url(r'^apis/$', ApiView.as_view() ,name='api'),
     url(r'^xadmin/', xadmin.site.urls),
     url(r'^$', IndexView.as_view(),name='index'),
     url(r'^login/$', LoginView.as_view() ,name='login'),
