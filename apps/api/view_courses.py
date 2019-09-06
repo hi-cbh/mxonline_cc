@@ -25,7 +25,7 @@ def course_list(request):
             if not request.POST:
                 return JsonResponse(
                     {"status": 500,
-                     'msg': "参数错误"
+                     'msg': "not request.POST"
                      }
                     , json_dumps_params={'ensure_ascii':False})
 
@@ -66,11 +66,10 @@ def course_list(request):
                  }
                 , json_dumps_params={'ensure_ascii':False})
 
-        except BaseException:
-            pass
+        except BaseException as error:
 
-        return JsonResponse(
-            {"status": 500,
-             'msg': "参数错误"
-             }
-            , json_dumps_params={'ensure_ascii':False})
+            return JsonResponse(
+                {"status": 500,
+                 'msg': "参数错误" + str(error)
+                 }
+                , json_dumps_params={'ensure_ascii':False})
