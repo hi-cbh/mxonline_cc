@@ -56,12 +56,61 @@ def course_list(request):
             p = Paginator(all_courses, 6, request=request)
             courses = p.page(page)
 
+
+            #QuerySet 需要转为 字典 + list
+
+            course_list1=[]
+            for c in all_courses:
+                course={}
+                course["org_name"] = c.course_org.name
+                course['teacher'] = c.teacher.name
+                course['name']= c.name
+                course['desc']= c.desc
+                course['degree']= c.detail
+                course['learn_times']= c.learn_times
+                course['students']= c.students
+                course['fav_nums']= c.fav_nums
+                course['image']= str(c.image)
+                course['click_nums']= c.click_nums
+                course['category']= c.category
+                course['is_banner']= c.is_banner
+                course['youneed_know']= c.youneed_know
+                course['teacher_tell']= c.teacher_tell
+                course['tag']= c.tag
+                course['add_time']= c.add_time
+
+                course_list1.append(course)
+
+
+            course_list2=[]
+            for c in hot_courses:
+                course={}
+                course["org_name"] = c.course_org.name
+                course['teacher'] = c.teacher.name
+                course['name']= c.name
+                course['desc']= c.desc
+                course['degree']= c.detail
+                course['learn_times']= c.learn_times
+                course['students']= c.students
+                course['fav_nums']= c.fav_nums
+                course['image']= str(c.image)
+                course['click_nums']= c.click_nums
+                course['category']= c.category
+                course['is_banner']= c.is_banner
+                course['youneed_know']= c.youneed_know
+                course['teacher_tell']= c.teacher_tell
+                course['tag']= c.tag
+                course['add_time']= c.add_time
+
+                course_list2.append(course)
+
+
             return JsonResponse(
                 {"status":200,
                  'data':
                      {
-                         'all_courses':courses,
-                         'hot_courses':hot_courses,
+                         'all_courses':course_list1,
+                         'hot_courses':course_list2,
                      }
                  }
                 , json_dumps_params={'ensure_ascii':False})
