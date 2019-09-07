@@ -1,13 +1,16 @@
 from django.http import JsonResponse
 from django.core.exceptions  import ValidationError
+from django.views.generic.base import View
 
+from django.contrib.auth import  authenticate
 from courses.models import Course
-from organization.models import CourseOrg
-from users.models import Banner
-from pure_pagination import Paginator, EmptyPage, PageNotAnInteger
+from pure_pagination import Paginator, PageNotAnInteger
 from django.db.models import Q
+from operation.models import UserFavorite, CourseComments, UserCourse
 
-def course_list(request):
+
+
+class CourseListAPIView(View):
     '''课程接口'''
     '''
     参数解析：
@@ -18,8 +21,7 @@ def course_list(request):
     返回：
     
     '''
-    if request.method == 'POST':
-
+    def post(self, request):
         try:
 
             if not request.POST:
@@ -58,52 +60,52 @@ def course_list(request):
 
 
             #QuerySet 需要转为 字典 + list
-
             course_list1=[]
             for c in all_courses:
-                course={}
-                course["org_name"] = c.course_org.name
-                course['teacher'] = c.teacher.name
-                course['name']= c.name
-                course['desc']= c.desc
-                course['degree']= c.detail
-                course['learn_times']= c.learn_times
-                course['students']= c.students
-                course['fav_nums']= c.fav_nums
-                course['image']= str(c.image)
-                course['click_nums']= c.click_nums
-                course['category']= c.category
-                course['is_banner']= c.is_banner
-                course['youneed_know']= c.youneed_know
-                course['teacher_tell']= c.teacher_tell
-                course['tag']= c.tag
-                course['add_time']= c.add_time
-
-                course_list1.append(course)
+                course_list1.append(
+                    {
+                        "org_name" : c.course_org.name,
+                        'teacher' : c.teacher.name,
+                        'name' : c.name,
+                        'desc' : c.desc,
+                        'degree' : c.detail,
+                        'learn_times' : c.learn_times,
+                        'students' : c.students,
+                        'fav_nums' : c.fav_nums,
+                        'image' : str(c.image),
+                        'click_nums' : c.click_nums,
+                        'category' : c.category,
+                        'is_banner' : c.is_banner,
+                        'youneed_know' : c.youneed_know,
+                        'teacher_tell' : c.teacher_tell,
+                        'tag' : c.tag,
+                        'add_time' : c.add_time
+                    }
+                )
 
 
             course_list2=[]
             for c in hot_courses:
-                course={}
-                course["org_name"] = c.course_org.name
-                course['teacher'] = c.teacher.name
-                course['name']= c.name
-                course['desc']= c.desc
-                course['degree']= c.detail
-                course['learn_times']= c.learn_times
-                course['students']= c.students
-                course['fav_nums']= c.fav_nums
-                course['image']= str(c.image)
-                course['click_nums']= c.click_nums
-                course['category']= c.category
-                course['is_banner']= c.is_banner
-                course['youneed_know']= c.youneed_know
-                course['teacher_tell']= c.teacher_tell
-                course['tag']= c.tag
-                course['add_time']= c.add_time
-
-                course_list2.append(course)
-
+                course_list2.append(
+                    {
+                        "org_name" : c.course_org.name,
+                        'teacher' : c.teacher.name,
+                        'name' : c.name,
+                        'desc' : c.desc,
+                        'degree' : c.detail,
+                        'learn_times' : c.learn_times,
+                        'students' : c.students,
+                        'fav_nums' : c.fav_nums,
+                        'image' : str(c.image),
+                        'click_nums' : c.click_nums,
+                        'category' : c.category,
+                        'is_banner' : c.is_banner,
+                        'youneed_know' : c.youneed_know,
+                        'teacher_tell' : c.teacher_tell,
+                        'tag' : c.tag,
+                        'add_time' : c.add_time
+                    }
+                )
 
             return JsonResponse(
                 {"status":200,
@@ -122,3 +124,55 @@ def course_list(request):
                  'msg': "参数错误" + str(error)
                  }
                 , json_dumps_params={'ensure_ascii':False})
+
+
+
+class CourseDetailAPIView(View):
+
+    def get(self, request,course_id):
+        '''
+            课程详情页
+        :param request:
+        :param course_id:
+        :return:
+        '''
+
+
+        #user = authenticate(username = user_name ,password = pass_word)
+
+        course = Course.objects.get(id=int(course_id))
+
+        course.click_nums +=1
+        course.save()
+
+
+        has_fav_org = False
+        has_fav_course = False
+
+        if request.user.is_authenticated():
+            if UserFavorite.objects.filter(user=request.user,
+                                           fav_id=course.id, fav_type=1):
+                has_fav_course = True
+            if UserFavorite.objects.filter(user=request.user,
+                                           fav_id=course.course_org.id, fav_type=2):
+                has_fav_org = True
+
+
+        tag = course.tag
+        if tag:
+            relate_courses = Course.objects.filter(~Q(id=course.id),tag=tag)[:1]
+
+        else:
+            relate_courses = []
+
+        return JsonResponse(
+            {"status":200,
+             'data':
+                 {
+                     'course':course,
+                     'relate_courses':relate_courses,
+                     'has_fav_course':has_fav_course,
+                     'has_fav_org':has_fav_org,
+                 }
+             }
+            , json_dumps_params={'ensure_ascii':False})

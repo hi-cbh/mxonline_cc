@@ -8,4 +8,7 @@ def test_null(request):
 
 
 def test_demo(request):
+
     return JsonResponse({'status':200, "message":"ok"})
+
+
