@@ -11,6 +11,9 @@ urlpatterns = [
     url(r'^course/',LoginAPIView.as_view(),name='login'),
     url(r'^course/',CourseListAPIView.as_view(),name='course_list'),
     url(r'^detail/(?P<course_id>\d+)/$',CourseDetailAPIView.as_view(),name="course_detail"),
+    url(r'^download_2M/', test_download , name="download2"),
+    url(r'^download_1M/', test_download_1M, name="download"),
+
     url(r'^$',test_null,name='test_null'),
 
 
