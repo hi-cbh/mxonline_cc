@@ -48,3 +48,23 @@ def test_download_1M(request):
         except BaseException as error:
 
             return HttpResponse({"message":"file error"+str(error)})
+
+
+
+
+def test_download_100K(request):
+    """
+        API文档下载
+       :param request:
+       :return:
+       """
+    if request.method == "GET":
+        try:
+            file = open('static/file/100K.png', 'rb')
+            response = HttpResponse(file)
+            response['Content-Type'] = 'application/octet-stream'  # 设置头信息，告诉浏览器这是个文件
+            response['Content-Disposition'] = 'attachment;filename="100K.png"'
+            return response
+        except BaseException as error:
+
+            return HttpResponse({"message":"file error"+str(error)})
