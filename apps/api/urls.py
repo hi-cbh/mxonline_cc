@@ -8,7 +8,7 @@ from apps.api.views_user import LoginAPIView
 urlpatterns = [
     url(r'^test_demo/',test_demo,name='test_demo'),
     url(r'^index/',index_page,name='index'),
-    url(r'^course/',LoginAPIView.as_view(),name='login'),
+    url(r'^login/',LoginAPIView.as_view(),name='login'),
     url(r'^course/',CourseListAPIView.as_view(),name='course_list'),
     url(r'^detail/(?P<course_id>\d+)/$',CourseDetailAPIView.as_view(),name="course_detail"),
     url(r'^download_2M/', test_download , name="download2"),
