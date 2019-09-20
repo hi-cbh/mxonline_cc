@@ -13,7 +13,7 @@ urlpatterns = [
     url(r'^detail/(?P<course_id>\d+)/$',CourseDetailAPIView.as_view(),name="course_detail"),
     url(r'^download_2M/', test_download , name="download2"),
     url(r'^download_1M/', test_download_1M, name="download"),
-    url(r'^download_100K/', test_download_1M, name="download3"),
+    url(r'^download_100K/', test_download_100K, name="download3"),
 
     url(r'^$',test_null,name='test_null'),
 
