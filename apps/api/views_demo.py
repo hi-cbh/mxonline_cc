@@ -60,7 +60,7 @@ def test_download_100K(request):
        """
     if request.method == "GET":
         try:
-            file = open('static/file/100K.png', 'rb')
+            file = open('static/file/100k.png', 'rb')
             response = HttpResponse(file)
             response['Content-Type'] = 'application/octet-stream'  # 设置头信息，告诉浏览器这是个文件
             response['Content-Disposition'] = 'attachment;filename="100K.png"'
