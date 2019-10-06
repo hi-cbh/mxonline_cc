@@ -203,8 +203,8 @@ class CourseDetailAPIView(View):
             {"status":200,
              'data':
                  {
-                     'course':course,
-                     'relate_courses':relate_courses,
+                     # 'course':course,
+                     # 'relate_courses':relate_courses,
                      'has_fav_course':has_fav_course,
                      'has_fav_org':has_fav_org,
                  }
