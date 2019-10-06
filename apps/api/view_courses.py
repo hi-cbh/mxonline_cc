@@ -194,6 +194,30 @@ class CourseDetailAPIView(View):
         if tag:
             relate_courses = Course.objects.filter(~Q(id=course.id),tag=tag)[:1]
 
+            relate_course = []
+            relate_course.append(
+                {
+                    "org_name" : relate_courses.course_org.name,
+                    'teacher' : relate_courses.teacher.name,
+                    'name' : relate_courses.name,
+                    'desc' : relate_courses.desc,
+                    'degree' : relate_courses.detail,
+                    'learn_times' : relate_courses.learn_times,
+                    'students' : relate_courses.students,
+                    'fav_nums' : relate_courses.fav_nums,
+                    'image' : str(relate_courses.image),
+                    'click_nums' : relate_courses.click_nums,
+                    'category' : relate_courses.category,
+                    'is_banner' : relate_courses.is_banner,
+                    'youneed_know' : relate_courses.youneed_know,
+                    'teacher_tell' : relate_courses.teacher_tell,
+                    'tag' : relate_courses.tag,
+                    'add_time' : relate_courses.add_time
+                }
+            )
+            relate_courses = relate_course
+
+
         else:
             relate_courses = []
 
@@ -202,7 +226,7 @@ class CourseDetailAPIView(View):
              'data':
                  {
                      'course':courses,
-                     # 'relate_courses':relate_courses,
+                     'relate_courses':relate_courses,
                      'has_fav_course':has_fav_course,
                      'has_fav_org':has_fav_org,
                  }

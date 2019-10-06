@@ -87,14 +87,15 @@
       <file leaf-file-name="view_courses.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/api/view_courses.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2352">
-              <caret line="205" column="53" lean-forward="true" selection-start-line="205" selection-start-column="53" selection-end-line="205" selection-end-column="53" />
+            <state relative-caret-position="-177">
+              <caret line="196" column="12" lean-forward="false" selection-start-line="196" selection-start-column="12" selection-end-line="196" selection-end-column="12" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
-                <element signature="e#7102#8796#0" expanded="false" />
-                <element signature="e#8831#10368#0" expanded="false" />
-                <element signature="e#10408#12068#0" expanded="false" />
-                <element signature="e#12104#13735#0" expanded="false" />
+                <element signature="e#464#4417#0" expanded="false" />
+                <element signature="e#8194#9888#0" expanded="false" />
+                <element signature="e#9923#11460#0" expanded="false" />
+                <element signature="e#11500#13160#0" expanded="false" />
+                <element signature="e#13196#14827#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -512,7 +513,7 @@
       <workItem from="1566050643403" duration="511000" />
       <workItem from="1566864073028" duration="590000" />
       <workItem from="1567643105639" duration="2721000" />
-      <workItem from="1570266640004" duration="6173000" />
+      <workItem from="1570266640004" duration="6409000" />
     </task>
     <task id="LOCAL-00001" summary="修复未登录，进入teacher 详情">
       <created>1564890151423</created>
@@ -598,11 +599,18 @@
       <option name="project" value="LOCAL" />
       <updated>1570368350945</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="调试接口减少登录验证8">
+      <created>1570368436843</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1570368436843</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="293377000" />
+    <option name="totallyTimeSpent" value="293613000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -691,7 +699,8 @@
     <MESSAGE value="调试接口减少登录验证5" />
     <MESSAGE value="调试接口减少登录验证6" />
     <MESSAGE value="调试接口减少登录验证7" />
-    <option name="LAST_COMMIT_MESSAGE" value="调试接口减少登录验证7" />
+    <MESSAGE value="调试接口减少登录验证8" />
+    <option name="LAST_COMMIT_MESSAGE" value="调试接口减少登录验证8" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1138,14 +1147,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/api/view_courses.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2352">
-          <caret line="205" column="53" lean-forward="true" selection-start-line="205" selection-start-column="53" selection-end-line="205" selection-end-column="53" />
+        <state relative-caret-position="-177">
+          <caret line="196" column="12" lean-forward="false" selection-start-line="196" selection-start-column="12" selection-end-line="196" selection-end-column="12" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
-            <element signature="e#7102#8796#0" expanded="false" />
-            <element signature="e#8831#10368#0" expanded="false" />
-            <element signature="e#10408#12068#0" expanded="false" />
-            <element signature="e#12104#13735#0" expanded="false" />
+            <element signature="e#464#4417#0" expanded="false" />
+            <element signature="e#8194#9888#0" expanded="false" />
+            <element signature="e#9923#11460#0" expanded="false" />
+            <element signature="e#11500#13160#0" expanded="false" />
+            <element signature="e#13196#14827#0" expanded="false" />
           </folding>
         </state>
       </provider>
