@@ -135,104 +135,114 @@ class CourseDetailAPIView(View):
         :return:
         将用户get接口，改为post接口仅仅用于接口测试
         '''
-        course_id = request.POST.get("course_id","")
+        try:
+            course_id = request.POST.get("course_id","")
 
-        #user = authenticate(username = user_name ,password = pass_word)
+            #user = authenticate(username = user_name ,password = pass_word)
 
-        course = Course.objects.get(id=int(course_id))
+            course = Course.objects.get(id=int(course_id))
 
-        course.click_nums +=1
-        course.save()
+            course.click_nums +=1
+            course.save()
 
-        courses=[]
-        courses.append(
-            {
-                "org_name" : course.course_org.name,
-                'teacher' : course.teacher.name,
-                'name' : course.name,
-                'desc' : course.desc,
-                'degree' : course.detail,
-                'learn_times' : course.learn_times,
-                'students' : course.students,
-                'fav_nums' : course.fav_nums,
-                'image' : str(course.image),
-                'click_nums' : course.click_nums,
-                'category' : course.category,
-                'is_banner' : course.is_banner,
-                'youneed_know' : course.youneed_know,
-                'teacher_tell' : course.teacher_tell,
-                'tag' : course.tag,
-                'add_time' : course.add_time
-            }
-        )
-
-
-
-
-        has_fav_org = False
-        has_fav_course = False
-
-        # login_form = LoginForm(request.POST)
-        # if login_form.is_valid():
-        # user_name = request.POST.get("username","")
-        # pass_word = request.POST.get("password","")
-        #
-        # print("user_name = %s, pass_word = %s" %(user_name,pass_word))
-        # user = authenticate(username = user_name ,password = pass_word)
-
-
-        # if user.is_authenticated():
-        #     if UserFavorite.objects.filter(user=request.user,
-        #                                    fav_id=course.id, fav_type=1):
-        #         has_fav_course = True
-        #     if UserFavorite.objects.filter(user=request.user,
-        #                                    fav_id=course.course_org.id, fav_type=2):
-        #         has_fav_org = True
-        #
-
-        tag = course.tag
-        if tag:
-            relate_courses = Course.objects.filter(~Q(id=course.id),tag=tag)[:1]
-
-            relate_course = []
-            relate_course.append(
+            courses=[]
+            courses.append(
                 {
-                    "org_name" : relate_courses.course_org.name,
-                    'teacher' : relate_courses.teacher.name,
-                    'name' : relate_courses.name,
-                    'desc' : relate_courses.desc,
-                    'degree' : relate_courses.detail,
-                    'learn_times' : relate_courses.learn_times,
-                    'students' : relate_courses.students,
-                    'fav_nums' : relate_courses.fav_nums,
-                    'image' : str(relate_courses.image),
-                    'click_nums' : relate_courses.click_nums,
-                    'category' : relate_courses.category,
-                    'is_banner' : relate_courses.is_banner,
-                    'youneed_know' : relate_courses.youneed_know,
-                    'teacher_tell' : relate_courses.teacher_tell,
-                    'tag' : relate_courses.tag,
-                    'add_time' : relate_courses.add_time
+                    "org_name" : course.course_org.name,
+                    'teacher' : course.teacher.name,
+                    'name' : course.name,
+                    'desc' : course.desc,
+                    'degree' : course.detail,
+                    'learn_times' : course.learn_times,
+                    'students' : course.students,
+                    'fav_nums' : course.fav_nums,
+                    'image' : str(course.image),
+                    'click_nums' : course.click_nums,
+                    'category' : course.category,
+                    'is_banner' : course.is_banner,
+                    'youneed_know' : course.youneed_know,
+                    'teacher_tell' : course.teacher_tell,
+                    'tag' : course.tag,
+                    'add_time' : course.add_time
                 }
             )
-            relate_courses = relate_course
 
 
-        else:
-            relate_courses = []
 
-        return JsonResponse(
-            {"status":200,
-             'data':
-                 {
-                     'course':courses,
-                     'relate_courses':relate_courses,
-                     'has_fav_course':has_fav_course,
-                     'has_fav_org':has_fav_org,
+
+            has_fav_org = False
+            has_fav_course = False
+
+            # login_form = LoginForm(request.POST)
+            # if login_form.is_valid():
+            # user_name = request.POST.get("username","")
+            # pass_word = request.POST.get("password","")
+            #
+            # print("user_name = %s, pass_word = %s" %(user_name,pass_word))
+            # user = authenticate(username = user_name ,password = pass_word)
+
+
+            # if user.is_authenticated():
+            #     if UserFavorite.objects.filter(user=request.user,
+            #                                    fav_id=course.id, fav_type=1):
+            #         has_fav_course = True
+            #     if UserFavorite.objects.filter(user=request.user,
+            #                                    fav_id=course.course_org.id, fav_type=2):
+            #         has_fav_org = True
+            #
+
+            tag = course.tag
+            if tag:
+                relate_courses = Course.objects.filter(~Q(id=course.id),tag=tag)[:1]
+
+                relate_course = []
+                relate_course.append(
+                    {
+                        "org_name" : relate_courses.course_org.name,
+                        'teacher' : relate_courses.teacher.name,
+                        'name' : relate_courses.name,
+                        'desc' : relate_courses.desc,
+                        'degree' : relate_courses.detail,
+                        'learn_times' : relate_courses.learn_times,
+                        'students' : relate_courses.students,
+                        'fav_nums' : relate_courses.fav_nums,
+                        'image' : str(relate_courses.image),
+                        'click_nums' : relate_courses.click_nums,
+                        'category' : relate_courses.category,
+                        'is_banner' : relate_courses.is_banner,
+                        'youneed_know' : relate_courses.youneed_know,
+                        'teacher_tell' : relate_courses.teacher_tell,
+                        'tag' : relate_courses.tag,
+                        'add_time' : relate_courses.add_time
+                    }
+                )
+                relate_courses = relate_course
+
+
+            else:
+                relate_courses = []
+
+            return JsonResponse(
+                {"status":200,
+                 'data':
+                     {
+                         'course':courses,
+                         'relate_courses':relate_courses,
+                         'has_fav_course':has_fav_course,
+                         'has_fav_org':has_fav_org,
+                     }
                  }
-             }
-            , json_dumps_params={'ensure_ascii':False})
+                , json_dumps_params={'ensure_ascii':False})
+        except BaseException as be:
+            return JsonResponse(
+                {"status":500,
+                 'data':
+                     {
+                         'msg':be,
 
+                     }
+                 }
+                , json_dumps_params={'ensure_ascii':False})
 
 class CourseInfoAPIView(View):
     '''课程章节信息'''

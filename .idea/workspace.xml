@@ -87,15 +87,15 @@
       <file leaf-file-name="view_courses.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/api/view_courses.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-177">
-              <caret line="196" column="12" lean-forward="false" selection-start-line="196" selection-start-column="12" selection-end-line="196" selection-end-column="12" />
+            <state relative-caret-position="-936">
+              <caret line="195" column="67" lean-forward="false" selection-start-line="195" selection-start-column="61" selection-end-line="195" selection-end-column="67" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
                 <element signature="e#464#4417#0" expanded="false" />
-                <element signature="e#8194#9888#0" expanded="false" />
-                <element signature="e#9923#11460#0" expanded="false" />
-                <element signature="e#11500#13160#0" expanded="false" />
-                <element signature="e#13196#14827#0" expanded="false" />
+                <element signature="e#8816#10510#0" expanded="false" />
+                <element signature="e#10545#12082#0" expanded="false" />
+                <element signature="e#12122#13782#0" expanded="false" />
+                <element signature="e#13818#15449#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -513,7 +513,7 @@
       <workItem from="1566050643403" duration="511000" />
       <workItem from="1566864073028" duration="590000" />
       <workItem from="1567643105639" duration="2721000" />
-      <workItem from="1570266640004" duration="6409000" />
+      <workItem from="1570266640004" duration="6598000" />
     </task>
     <task id="LOCAL-00001" summary="修复未登录，进入teacher 详情">
       <created>1564890151423</created>
@@ -606,11 +606,18 @@
       <option name="project" value="LOCAL" />
       <updated>1570368436843</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="调试接口减少登录验证9">
+      <created>1570368673358</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1570368673358</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="293613000" />
+    <option name="totallyTimeSpent" value="293802000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -636,7 +643,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20197044" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2079288" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2079288" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="SonarLint" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840723" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293578" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -700,7 +707,8 @@
     <MESSAGE value="调试接口减少登录验证6" />
     <MESSAGE value="调试接口减少登录验证7" />
     <MESSAGE value="调试接口减少登录验证8" />
-    <option name="LAST_COMMIT_MESSAGE" value="调试接口减少登录验证8" />
+    <MESSAGE value="调试接口减少登录验证9" />
+    <option name="LAST_COMMIT_MESSAGE" value="调试接口减少登录验证9" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1147,15 +1155,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/api/view_courses.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-177">
-          <caret line="196" column="12" lean-forward="false" selection-start-line="196" selection-start-column="12" selection-end-line="196" selection-end-column="12" />
+        <state relative-caret-position="-936">
+          <caret line="195" column="67" lean-forward="false" selection-start-line="195" selection-start-column="61" selection-end-line="195" selection-end-column="67" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
             <element signature="e#464#4417#0" expanded="false" />
-            <element signature="e#8194#9888#0" expanded="false" />
-            <element signature="e#9923#11460#0" expanded="false" />
-            <element signature="e#11500#13160#0" expanded="false" />
-            <element signature="e#13196#14827#0" expanded="false" />
+            <element signature="e#8816#10510#0" expanded="false" />
+            <element signature="e#10545#12082#0" expanded="false" />
+            <element signature="e#12122#13782#0" expanded="false" />
+            <element signature="e#13818#15449#0" expanded="false" />
           </folding>
         </state>
       </provider>
