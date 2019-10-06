@@ -167,29 +167,26 @@ class CourseDetailAPIView(View):
                 }
             )
 
-
-
-
             has_fav_org = False
             has_fav_course = False
 
             # login_form = LoginForm(request.POST)
             # if login_form.is_valid():
-            # user_name = request.POST.get("username","")
-            # pass_word = request.POST.get("password","")
-            #
-            # print("user_name = %s, pass_word = %s" %(user_name,pass_word))
-            # user = authenticate(username = user_name ,password = pass_word)
+            user_name = request.POST.get("username","")
+            pass_word = request.POST.get("password","")
+
+            print("user_name = %s, pass_word = %s" %(user_name,pass_word))
+            user = authenticate(username = user_name ,password = pass_word)
 
 
-            # if user.is_authenticated():
-            #     if UserFavorite.objects.filter(user=request.user,
-            #                                    fav_id=course.id, fav_type=1):
-            #         has_fav_course = True
-            #     if UserFavorite.objects.filter(user=request.user,
-            #                                    fav_id=course.course_org.id, fav_type=2):
-            #         has_fav_org = True
-            #
+            if user.is_authenticated():
+                if UserFavorite.objects.filter(user=user,
+                                               fav_id=course.id, fav_type=1):
+                    has_fav_course = True
+                if UserFavorite.objects.filter(user=user,
+                                               fav_id=course.course_org.id, fav_type=2):
+                    has_fav_org = True
+
 
             tag = course.tag
             if tag:
