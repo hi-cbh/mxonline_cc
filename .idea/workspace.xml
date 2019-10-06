@@ -87,14 +87,14 @@
       <file leaf-file-name="view_courses.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/api/view_courses.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
+            <state relative-caret-position="2352">
               <caret line="205" column="53" lean-forward="true" selection-start-line="205" selection-start-column="53" selection-end-line="205" selection-end-column="53" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
-                <element signature="e#7100#8794#0" expanded="false" />
-                <element signature="e#8829#10366#0" expanded="false" />
-                <element signature="e#10406#12066#0" expanded="false" />
-                <element signature="e#12102#13733#0" expanded="false" />
+                <element signature="e#7102#8796#0" expanded="false" />
+                <element signature="e#8831#10368#0" expanded="false" />
+                <element signature="e#10408#12068#0" expanded="false" />
+                <element signature="e#12104#13735#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -512,7 +512,7 @@
       <workItem from="1566050643403" duration="511000" />
       <workItem from="1566864073028" duration="590000" />
       <workItem from="1567643105639" duration="2721000" />
-      <workItem from="1570266640004" duration="6088000" />
+      <workItem from="1570266640004" duration="6173000" />
     </task>
     <task id="LOCAL-00001" summary="修复未登录，进入teacher 详情">
       <created>1564890151423</created>
@@ -591,11 +591,18 @@
       <option name="project" value="LOCAL" />
       <updated>1570368247055</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="调试接口减少登录验证7">
+      <created>1570368350945</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1570368350945</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="293292000" />
+    <option name="totallyTimeSpent" value="293377000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -683,7 +690,8 @@
     <MESSAGE value="调试接口减少登录验证4" />
     <MESSAGE value="调试接口减少登录验证5" />
     <MESSAGE value="调试接口减少登录验证6" />
-    <option name="LAST_COMMIT_MESSAGE" value="调试接口减少登录验证6" />
+    <MESSAGE value="调试接口减少登录验证7" />
+    <option name="LAST_COMMIT_MESSAGE" value="调试接口减少登录验证7" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1130,14 +1138,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/api/view_courses.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
+        <state relative-caret-position="2352">
           <caret line="205" column="53" lean-forward="true" selection-start-line="205" selection-start-column="53" selection-end-line="205" selection-end-column="53" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
-            <element signature="e#7100#8794#0" expanded="false" />
-            <element signature="e#8829#10366#0" expanded="false" />
-            <element signature="e#10406#12066#0" expanded="false" />
-            <element signature="e#12102#13733#0" expanded="false" />
+            <element signature="e#7102#8796#0" expanded="false" />
+            <element signature="e#8831#10368#0" expanded="false" />
+            <element signature="e#10408#12068#0" expanded="false" />
+            <element signature="e#12104#13735#0" expanded="false" />
           </folding>
         </state>
       </provider>
