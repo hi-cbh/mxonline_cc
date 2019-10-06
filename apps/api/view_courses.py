@@ -196,26 +196,27 @@ class CourseDetailAPIView(View):
                 relate_courses = Course.objects.filter(~Q(id=course.id),tag=tag)[:1]
 
                 relate_course = []
-                # relate_course.append(
-                #     {
-                #         "org_name" : relate_courses.course_org.name,
-                #         'teacher' : relate_courses.teacher.name,
-                #         'name' : relate_courses.name,
-                #         'desc' : relate_courses.desc,
-                #         'degree' : relate_courses.detail,
-                #         'learn_times' : relate_courses.learn_times,
-                #         'students' : relate_courses.students,
-                #         'fav_nums' : relate_courses.fav_nums,
-                #         'image' : str(relate_courses.image),
-                #         'click_nums' : relate_courses.click_nums,
-                #         'category' : relate_courses.category,
-                #         'is_banner' : relate_courses.is_banner,
-                #         'youneed_know' : relate_courses.youneed_know,
-                #         'teacher_tell' : relate_courses.teacher_tell,
-                #         'tag' : relate_courses.tag,
-                #         'add_time' : relate_courses.add_time
-                #     }
-                # )
+                for c in relate_courses:
+                    relate_course.append(
+                        {
+                            "org_name" : c.course_org.name,
+                            'teacher' : c.teacher.name,
+                            'name' : c.name,
+                            'desc' : c.desc,
+                            'degree' : c.detail,
+                            'learn_times' : c.learn_times,
+                            'students' : c.students,
+                            'fav_nums' : c.fav_nums,
+                            'image' : str(c.image),
+                            'click_nums' : c.click_nums,
+                            'category' : c.category,
+                            'is_banner' : c.is_banner,
+                            'youneed_know' : c.youneed_know,
+                            'teacher_tell' : c.teacher_tell,
+                            'tag' : c.tag,
+                            'add_time' : c.add_time
+                        }
+                    )
                 relate_courses = relate_course
 
 
