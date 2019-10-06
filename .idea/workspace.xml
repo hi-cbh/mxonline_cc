@@ -87,13 +87,14 @@
       <file leaf-file-name="view_courses.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/api/view_courses.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="146" column="0" lean-forward="false" selection-start-line="146" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
+            <state relative-caret-position="440">
+              <caret line="205" column="53" lean-forward="true" selection-start-line="205" selection-start-column="53" selection-end-line="205" selection-end-column="53" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
-                <element signature="e#7104#8798#0" expanded="false" />
-                <element signature="e#8833#10370#0" expanded="false" />
-                <element signature="e#10410#12070#0" expanded="false" />
+                <element signature="e#7100#8794#0" expanded="false" />
+                <element signature="e#8829#10366#0" expanded="false" />
+                <element signature="e#10406#12066#0" expanded="false" />
+                <element signature="e#12102#13733#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -511,7 +512,7 @@
       <workItem from="1566050643403" duration="511000" />
       <workItem from="1566864073028" duration="590000" />
       <workItem from="1567643105639" duration="2721000" />
-      <workItem from="1570266640004" duration="5986000" />
+      <workItem from="1570266640004" duration="6088000" />
     </task>
     <task id="LOCAL-00001" summary="修复未登录，进入teacher 详情">
       <created>1564890151423</created>
@@ -583,11 +584,18 @@
       <option name="project" value="LOCAL" />
       <updated>1570368107945</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="调试接口减少登录验证6">
+      <created>1570368247055</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1570368247055</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="293190000" />
+    <option name="totallyTimeSpent" value="293292000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -674,7 +682,8 @@
     <MESSAGE value="调试接口减少登录验证3" />
     <MESSAGE value="调试接口减少登录验证4" />
     <MESSAGE value="调试接口减少登录验证5" />
-    <option name="LAST_COMMIT_MESSAGE" value="调试接口减少登录验证5" />
+    <MESSAGE value="调试接口减少登录验证6" />
+    <option name="LAST_COMMIT_MESSAGE" value="调试接口减少登录验证6" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1121,13 +1130,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/api/view_courses.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="146" column="0" lean-forward="false" selection-start-line="146" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
+        <state relative-caret-position="440">
+          <caret line="205" column="53" lean-forward="true" selection-start-line="205" selection-start-column="53" selection-end-line="205" selection-end-column="53" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
-            <element signature="e#7104#8798#0" expanded="false" />
-            <element signature="e#8833#10370#0" expanded="false" />
-            <element signature="e#10410#12070#0" expanded="false" />
+            <element signature="e#7100#8794#0" expanded="false" />
+            <element signature="e#8829#10366#0" expanded="false" />
+            <element signature="e#10406#12066#0" expanded="false" />
+            <element signature="e#12102#13733#0" expanded="false" />
           </folding>
         </state>
       </provider>

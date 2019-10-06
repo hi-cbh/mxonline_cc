@@ -174,7 +174,6 @@ class CourseDetailAPIView(View):
 
         # login_form = LoginForm(request.POST)
         # if login_form.is_valid():
-
         # user_name = request.POST.get("username","")
         # pass_word = request.POST.get("password","")
         #
@@ -202,8 +201,8 @@ class CourseDetailAPIView(View):
             {"status":200,
              'data':
                  {
-                     # 'course':course,
-                     # 'relate_courses':relate_courses,
+                     'course':courses,
+                     'relate_courses':relate_courses,
                      'has_fav_course':has_fav_course,
                      'has_fav_org':has_fav_org,
                  }
