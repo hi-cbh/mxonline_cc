@@ -144,27 +144,27 @@ class CourseDetailAPIView(View):
         course.click_nums +=1
         course.save()
 
-        # courses=[]
-        # courses.append(
-        #     {
-        #         "org_name" : course.course_org.name,
-        #         'teacher' : course.teacher.name,
-        #         'name' : course.name,
-        #         'desc' : course.desc,
-        #         'degree' : course.detail,
-        #         'learn_times' : course.learn_times,
-        #         'students' : course.students,
-        #         'fav_nums' : course.fav_nums,
-        #         'image' : str(course.image),
-        #         'click_nums' : course.click_nums,
-        #         'category' : course.category,
-        #         'is_banner' : course.is_banner,
-        #         'youneed_know' : course.youneed_know,
-        #         'teacher_tell' : course.teacher_tell,
-        #         'tag' : course.tag,
-        #         'add_time' : course.add_time
-        #     }
-        # )
+        courses=[]
+        courses.append(
+            {
+                "org_name" : course.course_org.name,
+                'teacher' : course.teacher.name,
+                'name' : course.name,
+                'desc' : course.desc,
+                'degree' : course.detail,
+                'learn_times' : course.learn_times,
+                'students' : course.students,
+                'fav_nums' : course.fav_nums,
+                'image' : str(course.image),
+                'click_nums' : course.click_nums,
+                'category' : course.category,
+                'is_banner' : course.is_banner,
+                'youneed_know' : course.youneed_know,
+                'teacher_tell' : course.teacher_tell,
+                'tag' : course.tag,
+                'add_time' : course.add_time
+            }
+        )
 
 
 

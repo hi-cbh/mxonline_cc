@@ -87,13 +87,13 @@
       <file leaf-file-name="view_courses.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/api/view_courses.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="613">
+            <state relative-caret-position="90">
               <caret line="146" column="0" lean-forward="false" selection-start-line="146" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
-                <element signature="e#7146#8840#0" expanded="false" />
-                <element signature="e#8875#10412#0" expanded="false" />
-                <element signature="e#10452#12112#0" expanded="false" />
+                <element signature="e#7104#8798#0" expanded="false" />
+                <element signature="e#8833#10370#0" expanded="false" />
+                <element signature="e#10410#12070#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -511,7 +511,7 @@
       <workItem from="1566050643403" duration="511000" />
       <workItem from="1566864073028" duration="590000" />
       <workItem from="1567643105639" duration="2721000" />
-      <workItem from="1570266640004" duration="5853000" />
+      <workItem from="1570266640004" duration="5986000" />
     </task>
     <task id="LOCAL-00001" summary="修复未登录，进入teacher 详情">
       <created>1564890151423</created>
@@ -576,11 +576,18 @@
       <option name="project" value="LOCAL" />
       <updated>1570367725812</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="调试接口减少登录验证5">
+      <created>1570368107944</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1570368107945</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="293057000" />
+    <option name="totallyTimeSpent" value="293190000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -606,7 +613,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20197044" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2079288" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2079288" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="SonarLint" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840723" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293578" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -666,7 +673,8 @@
     <MESSAGE value="调试接口减少登录验证2" />
     <MESSAGE value="调试接口减少登录验证3" />
     <MESSAGE value="调试接口减少登录验证4" />
-    <option name="LAST_COMMIT_MESSAGE" value="调试接口减少登录验证4" />
+    <MESSAGE value="调试接口减少登录验证5" />
+    <option name="LAST_COMMIT_MESSAGE" value="调试接口减少登录验证5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1113,13 +1121,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/api/view_courses.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="613">
+        <state relative-caret-position="90">
           <caret line="146" column="0" lean-forward="false" selection-start-line="146" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
-            <element signature="e#7146#8840#0" expanded="false" />
-            <element signature="e#8875#10412#0" expanded="false" />
-            <element signature="e#10452#12112#0" expanded="false" />
+            <element signature="e#7104#8798#0" expanded="false" />
+            <element signature="e#8833#10370#0" expanded="false" />
+            <element signature="e#10410#12070#0" expanded="false" />
           </folding>
         </state>
       </provider>
