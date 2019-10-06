@@ -127,7 +127,7 @@ class CourseListAPIView(View):
 
 class CourseDetailAPIView(View):
 
-    def get(self, request):
+    def post(self, request):
         '''
         课程详情页
         :param request:
