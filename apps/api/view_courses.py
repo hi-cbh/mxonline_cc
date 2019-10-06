@@ -144,6 +144,31 @@ class CourseDetailAPIView(View):
         course.click_nums +=1
         course.save()
 
+        courses=[]
+        for c in course:
+            courses.append(
+                {
+                    "org_name" : c.course_org.name,
+                    'teacher' : c.teacher.name,
+                    'name' : c.name,
+                    'desc' : c.desc,
+                    'degree' : c.detail,
+                    'learn_times' : c.learn_times,
+                    'students' : c.students,
+                    'fav_nums' : c.fav_nums,
+                    'image' : str(c.image),
+                    'click_nums' : c.click_nums,
+                    'category' : c.category,
+                    'is_banner' : c.is_banner,
+                    'youneed_know' : c.youneed_know,
+                    'teacher_tell' : c.teacher_tell,
+                    'tag' : c.tag,
+                    'add_time' : c.add_time
+                }
+            )
+
+
+
 
         has_fav_org = False
         has_fav_course = False
