@@ -144,28 +144,27 @@ class CourseDetailAPIView(View):
         course.click_nums +=1
         course.save()
 
-        courses=[]
-        for c in course:
-            courses.append(
-                {
-                    "org_name" : c.course_org.name,
-                    'teacher' : c.teacher.name,
-                    'name' : c.name,
-                    'desc' : c.desc,
-                    'degree' : c.detail,
-                    'learn_times' : c.learn_times,
-                    'students' : c.students,
-                    'fav_nums' : c.fav_nums,
-                    'image' : str(c.image),
-                    'click_nums' : c.click_nums,
-                    'category' : c.category,
-                    'is_banner' : c.is_banner,
-                    'youneed_know' : c.youneed_know,
-                    'teacher_tell' : c.teacher_tell,
-                    'tag' : c.tag,
-                    'add_time' : c.add_time
-                }
-            )
+        # courses=[]
+        # courses.append(
+        #     {
+        #         "org_name" : course.course_org.name,
+        #         'teacher' : course.teacher.name,
+        #         'name' : course.name,
+        #         'desc' : course.desc,
+        #         'degree' : course.detail,
+        #         'learn_times' : course.learn_times,
+        #         'students' : course.students,
+        #         'fav_nums' : course.fav_nums,
+        #         'image' : str(course.image),
+        #         'click_nums' : course.click_nums,
+        #         'category' : course.category,
+        #         'is_banner' : course.is_banner,
+        #         'youneed_know' : course.youneed_know,
+        #         'teacher_tell' : course.teacher_tell,
+        #         'tag' : course.tag,
+        #         'add_time' : course.add_time
+        #     }
+        # )
 
 
 
@@ -176,11 +175,11 @@ class CourseDetailAPIView(View):
         # login_form = LoginForm(request.POST)
         # if login_form.is_valid():
 
-        user_name = request.POST.get("username","")
-        pass_word = request.POST.get("password","")
-
-        print("user_name = %s, pass_word = %s" %(user_name,pass_word))
-        user = authenticate(username = user_name ,password = pass_word)
+        # user_name = request.POST.get("username","")
+        # pass_word = request.POST.get("password","")
+        #
+        # print("user_name = %s, pass_word = %s" %(user_name,pass_word))
+        # user = authenticate(username = user_name ,password = pass_word)
 
 
         # if user.is_authenticated():
