@@ -68,6 +68,22 @@ def course_Comments_list(comments):
 
 
 
+def course_Video_list(video):
+
+    course_Video_list=[]
+    for c in video:
+        video.append(
+            {
+                "lession" : c.course.name,
+                "name" : c.name,
+                "url" : c.url,
+                'learn_times' : c.learn_times,
+                'add_time' : c.add_time
+            }
+        )
+    return course_Video_list
+
+
 class CourseListAPIView(View):
     '''课程接口'''
     '''
@@ -414,18 +430,15 @@ class AddComentsAPIView(View):
 class VideoPlayAPIView(View):
     '''视频播放页面'''
     def get(self, request, video_id):
+
         video = Video.objects.get(id=int(video_id))
         course = video.lession.course
 
-        login_form = LoginForm(request.POST)
-        user = None
-        if login_form.is_valid():
+        user_name = request.POST.get("username","")
+        pass_word = request.POST.get("password","")
 
-            user_name = request.POST.get("username","")
-            pass_word = request.POST.get("password","")
-
-            print("user_name = %s, pass_word = %s" %(user_name,pass_word))
-            user = authenticate(username = user_name ,password = pass_word)
+        print("user_name = %s, pass_word = %s" %(user_name,pass_word))
+        user = authenticate(username = user_name ,password = pass_word)
 
         # 查询用户是否已经关联了该课程
         user_cs = UserCourse.objects.filter(user=user, course=course)
@@ -447,6 +460,11 @@ class VideoPlayAPIView(View):
         relate_courses = Course.objects.filter(id__in=course_ids).order_by('-click_nums')[:5]
 
         all_resources = CourseResourse.objects.filter(course=course)
+
+        course = course_list(course)
+        all_resources = course_Resourse_list(all_resources)
+        relate_courses = course_list(relate_courses)
+        video = course_Video_list(video)
 
         return JsonResponse(
             {"status":200,
