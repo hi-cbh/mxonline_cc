@@ -165,6 +165,11 @@ class CourseDetailAPIView(View):
         :param course_id:
         :return:
         将用户get接口，改为post接口仅仅用于接口测试
+        参数：
+            username=admin123
+            password=12345678
+            course_id=4
+
         '''
 
         course_id = request.POST.get("course_id","")
@@ -237,6 +242,14 @@ class CourseDetailAPIView(View):
 
 class CourseInfoAPIView(View):
     '''课程章节信息'''
+    '''
+    参数：
+    username=admin123
+    password=12345678
+    course_id=4
+
+    
+    '''
     def post(self, request):
         course_id = request.POST.get("course_id","")
         course = Course.objects.get(id=int(course_id))
@@ -292,8 +305,6 @@ class CourseInfoAPIView(View):
             }
         )
 
-
-
         all_resources = course_Resourse_list(all_resources)
         relate_courses = course_list(relate_courses)
 
@@ -311,7 +322,8 @@ class CourseInfoAPIView(View):
 
 class CommentAPIView(View):
     '''课程章节信息'''
-    def get(self, request):
+    def post(self, request):
+
         course_id = request.POST.get("course_id","")
 
         course = Course.objects.get(id=int(course_id))
