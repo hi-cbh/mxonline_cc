@@ -140,7 +140,7 @@ class CommentView(LoginRequiredMixin,View):
         course = Course.objects.get(id=int(course_id))
 
         all_resources = CourseResourse.objects.filter(course=course)
-        all_comments = CourseComments.objects.filter(user=request.user,course=course)
+        all_comments = CourseComments.objects.filter(course=course)
 
 
         user_courses = UserCourse.objects.filter(course=course)
